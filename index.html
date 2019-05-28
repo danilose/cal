@@ -28,211 +28,211 @@
           <div class="row mt-5 mx-0">
 
             <div class="col p-1 mx-0">
-              <select class="select_azul select form-control">
+              <select id="aparelho" class="select_azul select form-control">
                 <option>Notebook</option>
                 <option>Desktop</option>
               </select>
             </div>
 
             <div class="col p-1 mx-0">
-              <input type="number" class="form-control estiloinput" placeholder="Quantidade">
+              <input id="qtde" type="number" class="form-control estiloinput" placeholder="Quantidade">
             </div>
 
             <div class="col p-1 mx-0">
-              <select class="select form-control">
-                <option>Fabricante</option>
-                <option>Dell</option>
-                <option>HP</option>
-                <option>Compac</option>
-                <option>Acer</option>
-                <option>Sony</option>
-                <option>Lenovo</option>
-                <option>Samsung</option>
-                <option>Asus</option>
+              <select id="fabricante" class="select form-control">
+                <option value="100">Fabricante</option>
+                <option value="150">Dell</option>
+                <option value="100">HP</option>
+                <option value="150">Compac</option>
+                <option value="100">Acer</option>
+                <option value="150">Sony</option>
+                <option value="100">Lenovo</option>
+                <option value="150">Samsung</option>
+                <option value="100">Asus</option>
               </select>
             </div>
 
             <div class="col p-1 mx-0">
-              <select class="select form-control">
-                <option>Processador</option>
-                <option>Intel core 2</option>
-                <option>Intel core 2 Quad</option>
-                <option>i3 1ª Geração</option>
-              </select>
-            </div>
-
-            <div class="w-100"></div>
-
-            <div class="col p-1 mx-0">
-              <select class="select form-control">
-                <option>HD</option>
-                <option>Sata</option>
-                <option>SSD</option>
-                <option>Sem HD</option>
-              </select>
-            </div>
-
-            <div class="col p-1 mx-0">
-              <select class="select form-control">
-                <option>GB HD</option>
-                <option>80</option>
-                <option>120</option>
-                <option>160</option>
-              </select>
-            </div>
-
-            <div class="col p-1 mx-0">
-              <select class="select form-control">
-                <option>Memória</option>
-                <option>DDR</option>
-                <option>DDR3/PC3L</option>
-                <option>DDR4</option>
-              </select>
-            </div>
-
-            <div class="col p-1 mx-0">
-              <select class="select form-control">
-                <option>GB Memória</option>
-                <option>2GB</option>
-                <option>4GB</option>
-                <option>8GB</option>
+              <select id="processador" class="select form-control">
+                <option value="0">Processador</option>
+                <option value="50">Intel core 2</option>
+                <option value="100">Intel core 2 Quad</option>
+                <option value="150">i3 1ª Geração</option>
               </select>
             </div>
 
             <div class="w-100"></div>
 
             <div class="col p-1 mx-0">
-              <select class="select form-control">
-                <option>Placa de vídeo</option>
-                <option>1GB</option>
-                <option>2GB</option>
-                <option>3GB</option>
+              <select id="hd" class="select form-control">
+                <option value="0">HD</option>
+                <option value="50">Sata</option>
+                <option value="100">SSD</option>
+                <option value="0">Sem HD</option>
               </select>
             </div>
 
             <div class="col p-1 mx-0">
-              <select class="select form-control">
-                <option>Wipe Data</option>
-                <option>Sim</option>
-                <option>Não</option>
+              <select id="hd_gb" class="select form-control">
+                <option value="0">GB HD</option>
+                <option value="50">80</option>
+                <option value="100">120</option>
+                <option value="150">160</option>
               </select>
             </div>
 
             <div class="col p-1 mx-0">
-              <select class="select form-control">
-                <option>Triagem</option>
-                <option>Sim</option>
-                <option>Não</option>
+              <select id="memoria" class="select form-control">
+                <option value="0">Memória</option>
+                <option value="50">DDR</option>
+                <option value="100">DDR3/PC3L</option>
+                <option value="200">DDR4</option>
               </select>
             </div>
 
             <div class="col p-1 mx-0">
-              <select class="select form-control">
-                <option>Frete</option>
-                <option>Sim</option>
-                <option>Não</option>
+              <select id="memoria_gb" class="select form-control">
+                <option value="0">GB Memória</option>
+                <option value="100">2GB</option>
+                <option value="200">4GB</option>
+                <option value="300">8GB</option>
               </select>
             </div>
 
             <div class="w-100"></div>
 
-            <div class="col p-1 mx-0 mt-2 mb-0">
+            <div class="col p-1 mx-0">
+              <select id="placa_video" class="select form-control">
+                <option value="0">Placa de vídeo</option>
+                <option value="50">1GB</option>
+                <option value="200">2GB</option>
+                <option value="250">3GB</option>
+              </select>
+            </div>
+
+            <div class="col p-1 mx-0">
+              <select id="wipe_data" class="select form-control">
+                <option value="0">Wipe Data</option>
+                <option value="19">Sim</option>
+                <option value="0">Não</option>
+              </select>
+            </div>
+
+            <div class="col p-1 mx-0">
+              <select id="triagem" class="select form-control">
+                <option value="0">Triagem</option>
+                <option value="18">Sim</option>
+                <option value="0">Não</option>
+              </select>
+            </div>
+
+            <div class="col p-1 mx-0">
+              <select id="frete" class="select form-control">
+                <option value="0">Frete</option>
+                <option value="15">Sim</option>
+                <option value="0">Não</option>
+              </select>
+            </div>
+
+            <div class="w-100"></div>
+
+            <div class="col p-1 mx-0 mt-2 mb-0 validacao_note">
               <p class="h6 mb-0">Check List de Validação do Notebook</p>
             </div>
 
             <div class="w-100"></div>
 
-            <div class="col p-1 mx-0">
-              <select class="select_note form-control">
-                <option>Riscos</option>
-                <option>Excelente</option>
-                <option>Regular</option>
+            <div class="col p-1 mx-0 validacao_note">
+              <select id="note_riscos" class="select_note form-control">
+                <option value="0">Riscos</option>
+                <option value="0">Excelente</option>
+                <option value="3">Regular</option>
               </select>
             </div>
 
-            <div class="col p-1 mx-0">
-              <select class="select_note form-control">
-                <option>Quebras na Tampa</option>
-                <option>Excelente</option>
-                <option>Regular</option>
+            <div class="col p-1 mx-0 validacao_note">
+              <select id="note_quebras_tampa" class="select_note form-control">
+                <option value="0">Quebras na Tampa</option>
+                <option value="0">Excelente</option>
+                <option value="3">Regular</option>
               </select>
             </div>
 
-            <div class="col p-1 mx-0">
-              <select class="select_note form-control">
-                <option>Teclado</option>
-                <option>Excelente</option>
-                <option>Regular</option>
-              </select>
-            </div>
-
-            <div class="w-100"></div>
-
-            <div class="col p-1 mx-0">
-              <select class="select_note form-control">
-                <option>Fonte</option>
-                <option>Excelente</option>
-                <option>Regular</option>
-              </select>
-            </div>
-
-            <div class="col p-1 mx-0">
-              <select class="select_note form-control">
-                <option>Bateria</option>
-                <option>Excelente</option>
-                <option>Regular</option>
-                <option>Ruim</option>
-              </select>
-            </div>
-
-            <div class="col p-1 mx-0">
-              <select class="select_note form-control">
-                <option>Tela</option>
-                <option>Excelente</option>
-                <option>Regular</option>
-                <option>Ruim</option>
+            <div class="col p-1 mx-0 validacao_note">
+              <select id="note_teclado" class="select_note form-control">
+                <option value="0">Teclado</option>
+                <option value="0">Excelente</option>
+                <option value="3">Regular</option>
               </select>
             </div>
 
             <div class="w-100"></div>
 
-            <div class="col p-1 mx-0 mt-2 mb-0">
+            <div class="col p-1 mx-0 validacao_note">
+              <select id="note_fonte" class="select_note form-control">
+                <option value="0">Fonte</option>
+                <option value="0">Excelente</option>
+                <option value="3">Regular</option>
+              </select>
+            </div>
+
+            <div class="col p-1 mx-0 validacao_note">
+              <select id="note_bateria" class="select_note form-control">
+                <option value="0">Bateria</option>
+                <option value="0">Excelente</option>
+                <option value="3">Regular</option>
+                <option value="15">Ruim</option>
+              </select>
+            </div>
+
+            <div class="col p-1 mx-0 validacao_note">
+              <select id="note_tela" class="select_note form-control">
+                <option value="0">Tela</option>
+                <option value="0">Excelente</option>
+                <option value="3">Regular</option>
+                <option value="10">Ruim</option>
+              </select>
+            </div>
+
+            <div class="w-100"></div>
+
+            <div class="col p-1 mx-0 mt-2 mb-0 validacao_desk">
               <p class="h6 mb-0">Check List de Validação do Desktop</p>
             </div>
 
             <div class="w-100"></div>
 
-            <div class="col p-1 mx-0">
-              <select class="select form-control">
-                <option>Riscos</option>
-                <option>Excelente</option>
-                <option>Regular</option>
-                <option>Ruim</option>
+            <div class="col p-1 mx-0 validacao_desk">
+              <select id="desk_riscos" class="select form-control">
+                <option value="0">Riscos</option>
+                <option value="0">Excelente</option>
+                <option value="3">Regular</option>
+                <option value="10">Ruim</option>
               </select>
             </div>
 
-            <div class="col p-1 mx-0">
-              <select class="select form-control">
-                <option>Amassados</option>
-                <option>Excelente</option>
-                <option>Regular</option>
-                <option>Ruim</option>
+            <div class="col p-1 mx-0 validacao_desk">
+              <select id="desk_amassados" class="select form-control">
+                <option value="0">Amassados</option>
+                <option value="0">Excelente</option>
+                <option value="5">Regular</option>
+                <option value="10">Ruim</option>
               </select>
             </div>
 
-            <div class="col p-1 mx-0">
-              <select class="select form-control">
-                <option>Teclado</option>
-                <option>Sim</option>
-                <option>Não</option>
+            <div class="col p-1 mx-0 validacao_desk">
+              <select id="desk_teclado" class="select form-control">
+                <option value="0">Teclado</option>
+                <option value="5">Sim</option>
+                <option value="0">Não</option>
               </select>
             </div>
 
-            <div class="col p-1 mx-0">
-              <select class="select form-control">
-                <option>Mouse</option>
-                <option>Sim</option>
-                <option>Não</option>
+            <div class="col p-1 mx-0 validacao_desk">
+              <select id="desk_mouse" class="select form-control">
+                <option value="0">Mouse</option>
+                <option value="5">Sim</option>
+                <option value="0">Não</option>
               </select>
             </div>
 
@@ -243,8 +243,56 @@
 
     <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </body>
+
+  <script>
+    $(function() {
+
+      $(".validacao_note").hide();
+      $(".validacao_desk").hide();
+
+      $("#aparelho").change(function(){
+        if ($( "#aparelho option:selected" ).text() == "Notebook") {
+          $(".validacao_note").show();
+          $(".validacao_desk").hide();
+        }
+        if ($( "#aparelho option:selected" ).text() == "Desktop") {
+          $(".validacao_note").hide();
+          $(".validacao_desk").show();
+        }
+      });
+
+      $( "#aparelho" ).trigger( "change" );
+
+      $( "select" ).change(function(){
+
+        var fabricante = parseInt($("#fabricante option:selected").val());
+        var processador = parseInt($("#processador option:selected").val());
+        var hd = parseInt($("#hd option:selected").val());
+        var hd_gb = parseInt($("#hd_gb option:selected").val());
+        var memoria = parseInt($("#memoria option:selected").val());
+        var memoria_gb = parseInt($("#memoria_gb option:selected").val());
+
+        var val_note = fabricante + processador + hd + hd_gb + memoria + memoria_gb;
+
+        console.log("val_note: "+val_note);
+        var desconto_fonte = (val_note * parseInt($("#note_fonte option:selected").val()))/100;
+        console.log("desconto_fonte: "+desconto_fonte);
+        var desconto_bateria = (val_note * parseInt($("#note_bateria option:selected").val()))/100;
+        console.log("desconto_bateria: "+desconto_bateria);
+        var desconto_tela = (val_note * parseInt($("#note_tela option:selected").val()))/100;
+        console.log("desconto_tela: "+desconto_tela);
+        var val_note_desc = val_note - desconto_fonte - desconto_bateria - desconto_tela;
+        console.log("val_note_desc: "+val_note_desc);
+
+        $("#visor").val(val_note_desc);
+
+      });
+      //$( "select" ).trigger( "change" );
+
+    });
+  </script>
 </html>
