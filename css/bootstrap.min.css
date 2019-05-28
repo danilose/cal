@@ -1,0 +1,53 @@
+body{
+	background-image: url("../img/fundo_azul.jpg"); 
+	background-color: #F2F2F2;
+	background-repeat: repeat-x;
+}
+
+
+.calc {
+	margin-top: 130px;
+}
+
+#visor {
+    text-align: right;
+    height: 131px;
+    font-size: 80px;
+	background-color: #fff;
+}
+
+#real{
+	margin-top: -149px;
+    margin-left: 7px;
+}
+.select {
+	
+	background-color: #E8EAEB;
+	height: 52px;
+	font-size: 13px;
+}
+
+.select_azul {
+	
+	background-color: #C3EBFE;
+	height: 52px;
+	font-size: 13px;
+}
+
+.select_note {
+	
+	background-color: #C8CBCC;
+	height: 52px;
+	font-size: 13px;
+}
+
+.rounded {
+    border-radius: 2.00rem!important;
+}
+
+.estiloinput{
+	height: 52px;
+	    background-color: #e8eaeb;
+}
+
+
