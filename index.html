@@ -295,7 +295,7 @@
           var rec_disp = wipe_data + triagem + frete;
           var val_total_note = (val_note_desc - rec_disp) * qtde;
 
-          $("#visor").val(val_total_note);
+          $("#visor").val(val_total_note + ",00");
         }
 
         if (aparelho == "Desktop") {
@@ -308,7 +308,7 @@
           var rec_disp = wipe_data + triagem + frete;
           var val_total_desk = (val_desk_desc - rec_disp) * qtde;
 
-          $("#visor").val(val_total_desk);
+          $("#visor").val(val_total_desk + ",00");
         }
       }
 
