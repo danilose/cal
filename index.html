@@ -35,7 +35,7 @@
             </div>
 
             <div class="col p-1 mx-0">
-              <input id="qtde" type="number" class="form-control estiloinput" placeholder="Quantidade">
+              <input id="qtde" type="number" class="form-control estiloinput" placeholder="Quantidade" min="0">
             </div>
 
             <div class="col p-1 mx-0">
@@ -180,8 +180,7 @@
               <select id="note_bateria" class="select_note form-control">
                 <option value="0">Bateria</option>
                 <option value="0">Excelente</option>
-                <option value="3">Regular</option>
-                <option value="15">Ruim</option>
+                <option value="5">Ruim</option>
               </select>
             </div>
 
@@ -189,8 +188,8 @@
               <select id="note_tela" class="select_note form-control">
                 <option value="0">Tela</option>
                 <option value="0">Excelente</option>
-                <option value="3">Regular</option>
-                <option value="10">Ruim</option>
+                <option value="5">Regular</option>
+                <option value="15">Ruim</option>
               </select>
             </div>
 
@@ -207,7 +206,7 @@
                 <option value="0">Riscos</option>
                 <option value="0">Excelente</option>
                 <option value="3">Regular</option>
-                <option value="10">Ruim</option>
+                <option value="5">Ruim</option>
               </select>
             </div>
 
@@ -215,8 +214,8 @@
               <select id="desk_amassados" class="select form-control">
                 <option value="0">Amassados</option>
                 <option value="0">Excelente</option>
-                <option value="5">Regular</option>
-                <option value="10">Ruim</option>
+                <option value="3">Regular</option>
+                <option value="5">Ruim</option>
               </select>
             </div>
 
@@ -251,6 +250,68 @@
   <script>
     $(function() {
 
+      function calc() {
+
+        var aparelho = $("#aparelho option:selected").text();
+        var qtde = 0;
+        if ($("#qtde").val()){
+          qtde = parseInt($("#qtde").val());
+        }
+
+        var fabricante = parseInt($("#fabricante option:selected").val());
+        var processador = parseInt($("#processador option:selected").val());
+        var hd = parseInt($("#hd option:selected").val());
+        var hd_gb = parseInt($("#hd_gb option:selected").val());
+        var memoria = parseInt($("#memoria option:selected").val());
+        var memoria_gb = parseInt($("#memoria_gb option:selected").val());
+        var placa_video = parseInt($("#placa_video option:selected").val());
+
+        var wipe_data = parseInt($("#wipe_data option:selected").val());
+        var triagem = parseInt($("#triagem option:selected").val());
+        var frete = parseInt($("#frete option:selected").val());
+
+
+
+        var note_riscos = parseInt($("#note_riscos option:selected").val());
+        var note_quebras_tampa = parseInt($("#note_quebras_tampa option:selected").val());
+        var note_teclado = parseInt($("#note_teclado option:selected").val());
+
+        var note_fonte = parseInt($("#note_fonte option:selected").val());
+        var note_bateria = parseInt($("#note_bateria option:selected").val());
+        var note_tela = parseInt($("#note_tela option:selected").val());
+
+
+        var desk_riscos = parseInt($("#desk_riscos option:selected").val());
+        var desk_amassados = parseInt($("#desk_amassados option:selected").val());
+        var desk_teclado = parseInt($("#desk_teclado option:selected").val());
+        var desk_mouse = parseInt($("#desk_mouse option:selected").val());
+
+        if (aparelho == "Notebook") {
+          var val_note = processador + hd_gb + memoria_gb + placa_video;
+          var desconto_fonte = (val_note * note_fonte) / 100;
+          var desconto_bateria = (val_note * note_bateria) / 100;
+          var desconto_tela = (val_note * note_tela) / 100;
+          var val_note_desc = Math.ceil(val_note - desconto_fonte - desconto_bateria - desconto_tela);
+          var rec_disp = wipe_data + triagem + frete;
+          var val_total_note = (val_note_desc - rec_disp) * qtde;
+
+          $("#visor").val(val_total_note);
+        }
+
+        if (aparelho == "Desktop") {
+          var val_desk = processador + hd_gb + memoria_gb + placa_video;
+          var desconto_riscos = (val_desk * desk_riscos) / 100;
+          var desconto_amassados = (val_desk * desk_amassados) / 100;
+          var acrescimo_mouse = desk_mouse;
+          var acrescimo_teclado = desk_teclado;
+          var val_desk_desc = Math.ceil(val_desk - desconto_riscos - desconto_amassados + acrescimo_mouse + acrescimo_teclado);
+          var rec_disp = wipe_data + triagem + frete;
+          var val_total_desk = (val_desk_desc - rec_disp) * qtde;
+
+          $("#visor").val(val_total_desk);
+        }
+      }
+
       $(".validacao_note").hide();
       $(".validacao_desk").hide();
 
@@ -265,33 +326,17 @@
         }
       });
 
-      $( "#aparelho" ).trigger( "change" );
+      $("#aparelho").trigger( "change" );
 
-      $( "select" ).change(function(){
-
-        var fabricante = parseInt($("#fabricante option:selected").val());
-        var processador = parseInt($("#processador option:selected").val());
-        var hd = parseInt($("#hd option:selected").val());
-        var hd_gb = parseInt($("#hd_gb option:selected").val());
-        var memoria = parseInt($("#memoria option:selected").val());
-        var memoria_gb = parseInt($("#memoria_gb option:selected").val());
-
-        var val_note = fabricante + processador + hd + hd_gb + memoria + memoria_gb;
-
-        console.log("val_note: "+val_note);
-        var desconto_fonte = (val_note * parseInt($("#note_fonte option:selected").val()))/100;
-        console.log("desconto_fonte: "+desconto_fonte);
-        var desconto_bateria = (val_note * parseInt($("#note_bateria option:selected").val()))/100;
-        console.log("desconto_bateria: "+desconto_bateria);
-        var desconto_tela = (val_note * parseInt($("#note_tela option:selected").val()))/100;
-        console.log("desconto_tela: "+desconto_tela);
-        var val_note_desc = val_note - desconto_fonte - desconto_bateria - desconto_tela;
-        console.log("val_note_desc: "+val_note_desc);
-
-        $("#visor").val(val_note_desc);
-
+      $("select").on("change", function () {
+        calc()
       });
-      //$( "select" ).trigger( "change" );
+
+      $("#qtde").on("change paste keyup", function () {
+        calc()
+      });
+
+      $("#qtde").trigger( "change" );
 
     });
   </script>
